@@ -28,7 +28,7 @@
     font-size: 18px;
     transition: color ease .5s;
 }
-.nav-link:hover {
+.active {
     color: cadetblue;
 }
 
