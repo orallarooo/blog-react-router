@@ -13,7 +13,7 @@
 }
 .articles-page__img {
     width: 100%;
-    height: 500px;
+    height: 400px;
     object-fit: cover;
     object-position: top;
     margin-bottom: 15px;
@@ -29,6 +29,7 @@
     font-size: 34px;
 }
 .articles-page__text {
+    margin-top: 20px;
     font-weight: 400;
     font-size: 16px;
     color: #000000d1;
