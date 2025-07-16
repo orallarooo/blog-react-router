@@ -16,7 +16,7 @@ function App() {
           <Route index            element={<Home />} />
           <Route path="/about"    element={<About />} />
           <Route path="/articles" element={<Articles />} />
-          <Route path="/articles/:id" element={<Articles />} />
+          <Route path="/articles/:id" element={<Articles />} /> // другой компонент
         </Route>
       </Routes>
     </>

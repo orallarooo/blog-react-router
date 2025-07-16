@@ -8,6 +8,11 @@ import "./articles.css";
 export const Articles = () => {
   const {id} = useParams();
   
+  if (!id) {
+    return <p>Empty!!</p>
+  }
+
+  const item = data_cart.find((i) => i.id === +id);
 
   return (
     <>
@@ -27,15 +32,15 @@ export const Articles = () => {
           
 
           <div className="articles-page__body">
-              {id}
-            <h1 className="articles-page__title">{data_cart[id].title}</h1>
-            <p className="articles-page__hashtag">{data_cart[id].hashtag}</p>
+
+            <h1 className="articles-page__title">{item.title}</h1>
+            <p className="articles-page__hashtag">{item.hashtag}</p>
             <img
               className="articles-page__img"
-              src={data_cart[id].image}
+              src={item.image}
               alt=""
             />
-            <p className="articles-page__text">{data_cart[id].text}</p>
+            <p className="articles-page__text">{item.text}</p>
           </div>
         </div>
       </section>
