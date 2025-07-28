@@ -45,3 +45,23 @@
     margin-left: 5px;
     margin-top: 60px;
 }
+
+.articles-page__body-box {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.articles-page__btn {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  padding: 10px 20px;
+  border: 1px solid #20202060;
+  box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 14px;
+  color: green;
+  margin-left: auto
+}

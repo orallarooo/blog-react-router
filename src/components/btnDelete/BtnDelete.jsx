@@ -5,8 +5,8 @@ import "./btnDelete.css";
 const BtnDelete = ({onClick}) => {
   return (
       <button onClick={onClick} className="btn-delete">
+            <RiDeleteBin2Line />  
             <span>Удалить</span>
-            <RiDeleteBin2Line />
       </button>
   );
 };
