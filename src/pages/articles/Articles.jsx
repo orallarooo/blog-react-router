@@ -4,26 +4,25 @@ import { LeftBox } from "../../components/leftBox/LeftBox";
 import { Link } from "react-router";
 
 import "./articles.css";
-import BtnDelete from "../../components/btnDelete/btnDelete";
+import { BtnDelete } from "../../components/btnDelete/btnDelete";
 import { FaPlusSquare } from "react-icons/fa";
 
 import { useArticlesStore } from "../../assets/store/store";
 import ModalAddArticle from "../../components/modalAddArticle/ModalAddArticle";
 
 export const Articles = () => {
+  const [isOpen, setIsOpen] = useState(false);
   const { id } = useParams();
+  const { articles, deleteArticle } = useArticlesStore();
 
   if (!id) {
     return <p>Empty!!</p>;
   }
 
-  // zustand
-  const { articles, deleteArticle } = useArticlesStore();
+
   // find article
   const item = articles.find((i) => i.id === +id);
 
-  // modal-window
-  const [isOpen, setIsOpen] = useState(false);
   
   
 
