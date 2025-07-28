@@ -4,7 +4,7 @@ import { LeftBox } from "../../components/leftBox/LeftBox";
 import { Link } from "react-router";
 
 import "./articles.css";
-import { BtnDelete } from "../../components/btnDelete/btnDelete";
+import { BtnDelete } from "../../components/btnDelete/BtnDelete";
 import { FaPlusSquare } from "react-icons/fa";
 
 import { useArticlesStore } from "../../assets/store/store";
