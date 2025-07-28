@@ -4,14 +4,14 @@ import { LeftBox } from "../../components/leftBox/LeftBox";
 import { Link } from "react-router";
 
 import "./articles.css";
-// import { BtnDelete } from "../../components/btnDelete/btnDelete";
+import { BtnDelete } from "../../components/btnDelete/btnDelete";
 import { FaPlusSquare } from "react-icons/fa";
 
 import { useArticlesStore } from "../../assets/store/store";
 import ModalAddArticle from "../../components/modalAddArticle/ModalAddArticle";
 
 export const Articles = () => {
-  const { articles } = useArticlesStore();
+  const { articles, deleteArticle } = useArticlesStore();
   const [isOpen, setIsOpen] = useState(false);
   const { id } = useParams();
 
@@ -68,7 +68,7 @@ export const Articles = () => {
               <p className="articles-page__hashtag">{item.hashtag}</p>
               <img className="articles-page__img" src={item.image} alt="" />
 
-              {/* <BtnDelete onClick={() => deleteArticle(item.id)} /> */}
+              <BtnDelete onClick={() => deleteArticle(item.id)} />
 
               <p className="articles-page__text">{item.text}</p>
             </div>
