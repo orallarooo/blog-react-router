@@ -2,6 +2,7 @@ import { RiDeleteBin2Line } from "react-icons/ri";
 
 import "./btnDelete.css";
 
+
 export const BtnDelete = ({onClick}) => {
   return (
       <button onClick={onClick} className="btn-delete">
