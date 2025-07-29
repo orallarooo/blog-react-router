@@ -1,9 +1,10 @@
 import { create } from 'zustand';
-import { data_cart } from '../data/data.js'; // Import your data file
 
 export const useArticlesStore = create((set) => ({
   // Load articles from assets file
-  articles: data_cart || [],
+  articles:  [],
+
+  // articles of years -- boolean
 
  // Добавить новую статью
   addArticle: (newArticle) => {
@@ -16,6 +17,8 @@ export const useArticlesStore = create((set) => ({
     }));
   },
 
+  // методы добавления новых элементов в массив посмотреть
+
   // Удалить статью
   deleteArticle: (id) => {
     set((state) => ({
@@ -24,3 +27,9 @@ export const useArticlesStore = create((set) => ({
   }
 
 }));
+
+// push ->
+// pop  <-
+
+// shift   <-
+// unshift ->

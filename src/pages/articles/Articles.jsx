@@ -12,6 +12,7 @@ import ModalAddArticle from "../../components/modalAddArticle/ModalAddArticle";
 
 export const Articles = () => {
   const { articles, deleteArticle } = useArticlesStore();
+
   const [isOpen, setIsOpen] = useState(false);
   const { id } = useParams();
 
@@ -73,6 +74,7 @@ export const Articles = () => {
               <p className="articles-page__text">{item.text}</p>
             </div>
           )}
+          
         </div>
       </section>
     </>
