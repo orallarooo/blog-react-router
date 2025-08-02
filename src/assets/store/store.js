@@ -1,20 +1,23 @@
-import { create } from 'zustand';
+import { create } from 'zustand'
 
 export const useArticlesStore = create((set) => ({
   // Load articles from assets file
-  articles:  [],
+  articles: [],
 
   // articles of years -- boolean
 
- // Добавить новую статью
+  // Добавить новую статью
   addArticle: (newArticle) => {
     set((state) => ({
-      articles: [...state.articles, { 
-        ...newArticle, 
-        id: Date.now(),
-        createdAt: new Date().toISOString()
-      }]
-    }));
+      articles: [
+        ...state.articles,
+        {
+          ...newArticle,
+          id: Date.now(),
+          createdAt: new Date().toISOString(),
+        },
+      ],
+    }))
   },
 
   // методы добавления новых элементов в массив посмотреть
@@ -22,14 +25,7 @@ export const useArticlesStore = create((set) => ({
   // Удалить статью
   deleteArticle: (id) => {
     set((state) => ({
-      articles: state.articles.filter(article => article.id !== id)
-    }));
-  }
-
-}));
-
-// push ->
-// pop  <-
-
-// shift   <-
-// unshift ->
+      articles: state.articles.filter((article) => article.id !== id),
+    }))
+  },
+}))

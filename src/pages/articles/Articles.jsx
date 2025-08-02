@@ -1,31 +1,28 @@
-import { useState } from "react";
-import { useParams } from "react-router";
-import { LeftBox } from "../../components/leftBox/LeftBox";
-import { Link } from "react-router";
+import React from 'react'
+import { useState } from 'react'
+import { useParams } from 'react-router'
+import { LeftBox } from '../../components/leftBox/LeftBox'
+import { Link } from 'react-router'
 
-import "./articles.css";
-import { BtnDelete } from "../../components/btnDelete/BtnDelete";
-import { FaPlusSquare } from "react-icons/fa";
+import './articles.css'
+import { BtnDelete } from '../../components/btnDelete/BtnDelete'
+import { FaPlusSquare } from 'react-icons/fa'
 
-import { useArticlesStore } from "../../assets/store/store";
-import ModalAddArticle from "../../components/modalAddArticle/ModalAddArticle";
+import { useArticlesStore } from '../../assets/store/store'
+import ModalAddArticle from '../../components/modalAddArticle/ModalAddArticle'
 
 export const Articles = () => {
-  const { articles, deleteArticle } = useArticlesStore();
+  const { articles, deleteArticle } = useArticlesStore()
 
-  const [isOpen, setIsOpen] = useState(false);
-  const { id } = useParams();
+  const [isOpen, setIsOpen] = useState(false)
+  const { id } = useParams()
 
   if (!id) {
-    return <p>Empty!!</p>;
+    return <p>Empty!!</p>
   }
 
-
   // find article
-  const item = articles.find((i) => i.id === +id);
-
-  
-  
+  const item = articles.find((i) => i.id === +id)
 
   return (
     <>
@@ -45,21 +42,21 @@ export const Articles = () => {
                     time={post.date}
                   />
                 </Link>
-              );
+              )
             })}
           </div>
 
-          <ModalAddArticle isOpen={isOpen} onClose={() => setIsOpen(false)}/>
+          <ModalAddArticle isOpen={isOpen} onClose={() => setIsOpen(false)} />
 
           {!item ? (
-            "Article deleted"
+            'Article deleted'
           ) : (
             <div className="articles-page__body">
               <div className="articles-page__body-box">
                 <h1 className="articles-page__title">{item.title}</h1>
                 <button
-                  className="articles-page__btn"
                   isOpen={isOpen}
+                  className="articles-page__btn"
                   onClick={() => setIsOpen((prev) => !prev)}
                 >
                   <FaPlusSquare /> Добавить статью
@@ -74,9 +71,8 @@ export const Articles = () => {
               <p className="articles-page__text">{item.text}</p>
             </div>
           )}
-          
         </div>
       </section>
     </>
-  );
-};
+  )
+}

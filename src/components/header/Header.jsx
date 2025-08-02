@@ -1,6 +1,6 @@
-import "./header.css";
+import './header.css'
 
-import { NavLink } from "react-router";
+import { NavLink } from 'react-router'
 
 export const Header = () => {
   return (
@@ -32,5 +32,5 @@ export const Header = () => {
         </div>
       </header>
     </>
-  );
-};
+  )
+}

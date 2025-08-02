@@ -1,6 +1,6 @@
-import "./leftBox.css";
+import './leftBox.css'
 
-export const LeftBox = ({ img, hashtag, title, text}) => {
+export const LeftBox = ({ img, hashtag, title, text }) => {
   return (
     <div className="left-box">
       <img className="left-box__img" src={img} alt="" />
@@ -8,5 +8,5 @@ export const LeftBox = ({ img, hashtag, title, text}) => {
       <h3 className="left-box__title">{title}</h3>
       <p className="left-box__text">{text}</p>
     </div>
-  );
-};
+  )
+}

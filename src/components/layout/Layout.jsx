@@ -1,5 +1,5 @@
-import { Header } from "../header/Header";
-import { Outlet } from "react-router";
+import { Header } from '../header/Header'
+import { Outlet } from 'react-router'
 
 export const Layout = () => {
   return (
@@ -8,5 +8,5 @@ export const Layout = () => {
 
       <Outlet />
     </>
-  );
-};
+  )
+}

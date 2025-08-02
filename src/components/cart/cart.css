@@ -1,6 +1,6 @@
 .cart {
   width: 100%;
-  box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+  box-shadow: rgb(100 100 111 / 20%) 0 7px 29px 0;
   padding: 15px 15px 20px;
   border-radius: 10px;
   transition: all ease 0.5s;
@@ -8,7 +8,7 @@
 
 .cart:hover {
   transform: translateY(-3px);
-  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+  box-shadow: rgb(0 0 0 / 35%) 0 5px 15px;
 }
 
 .cart img {
@@ -25,6 +25,7 @@
   gap: 7px;
   margin-bottom: 10px;
 }
+
 .cart-hashtag {
   font-size: 16px;
   color: cadetblue;
@@ -43,7 +44,6 @@
   font-size: 14px;
   font-weight: 400;
   margin-bottom: 10px;
-
   display: -webkit-box;
   -webkit-box-orient: vertical;
   -webkit-line-clamp: 3;

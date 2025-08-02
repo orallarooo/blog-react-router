@@ -1,51 +1,52 @@
-import { useState } from "react";
-import { useArticlesStore } from "../../assets/store/store";
-import { IoMdCloseCircleOutline } from "react-icons/io";
+import React from 'react'
+import { useState } from 'react'
+import { useArticlesStore } from '../../assets/store/store'
+import { IoMdCloseCircleOutline } from 'react-icons/io'
 
-import "./modalAddArticle.css";
+import './modalAddArticle.css'
 
 export default function ModalAddArticle({ isOpen, onClose }) {
   // добавить артикл
-  const addArticle = useArticlesStore((state) => state.addArticle);
+  const addArticle = useArticlesStore((state) => state.addArticle)
 
   const [formData, setFormData] = useState({
-    title: "",
-    image: "",
-    text: "",
-  });
+    title: '',
+    image: '',
+    text: '',
+  })
 
   const handleSubmit = (e) => {
-    e.preventDefault();
+    e.preventDefault()
 
-    addArticle(formData);
+    addArticle(formData)
 
-    console.log(formData);
+    console.log(formData)
 
     // Очистить форму после добавления
     setFormData({
-      title: "",
-      image: "",
-      text: "",
-    });
+      title: '',
+      image: '',
+      text: '',
+    })
 
-    onClose();
-  };
+    onClose()
+  }
 
   const handleChange = (e) => {
-    const { name, value } = e.target;
-    setFormData((prev) => ({ ...prev, [name]: value }));
-  };
+    const { name, value } = e.target
+    setFormData((prev) => ({ ...prev, [name]: value }))
+  }
 
   if (isOpen) {
-    document.body.style.overflow = "hidden";
+    document.body.style.overflow = 'hidden'
   }
 
   return (
     <>
-      <div className={isOpen ? "overflow active" : "overflow"}></div>
+      <div className={isOpen ? 'overflow active' : 'overflow'}></div>
       <form
         onSubmit={handleSubmit}
-        className={isOpen ? "add-article-form active" : "add-article-form"}
+        className={isOpen ? 'add-article-form active' : 'add-article-form'}
       >
         <div className="form_box">
           <h2>Добавить новую статью</h2>
@@ -109,5 +110,5 @@ export default function ModalAddArticle({ isOpen, onClose }) {
         </button>
       </form>
     </>
-  );
+  )
 }

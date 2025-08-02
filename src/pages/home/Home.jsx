@@ -1,8 +1,9 @@
-import Cart from "../../components/cart/Cart";
-import { data_cart } from "../../assets/data/data";
-import { Link } from "react-router";
+import { Cart } from '../../components/cart/Cart'
+import { data_cart } from '../../assets/data/data'
+import { Link } from 'react-router'
+import React from 'react'
 
-import "./home.css";
+import './home.css'
 
 export const Home = () => {
   return (
@@ -30,11 +31,11 @@ export const Home = () => {
                     time={post.date}
                   />
                 </Link>
-              );
+              )
             })}
           </div>
         </div>
       </section>
     </>
-  );
-};
+  )
+}

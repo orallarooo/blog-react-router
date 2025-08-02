@@ -1,27 +1,27 @@
 .home-page {
-    width: 100%;
+  width: 100%;
 }
 
 .home-inner {
-    max-width: 1400px;
-    padding: 0 20px;
-    margin: 0 auto;
+  max-width: 1400px;
+  padding: 0 20px;
+  margin: 0 auto;
 }
 
 .home-top {
-    padding: 80px 0;
-    text-align: center;
+  padding: 80px 0;
+  text-align: center;
 }
 
 .home-top_text {
-    margin: 0 auto;
-    max-width: 900px;
-    font-size: 26px;
-    margin-bottom: 20px;
+  margin: 0 auto;
+  max-width: 900px;
+  font-size: 26px;
+  margin-bottom: 20px;
 }
 
 .boxes {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 20px;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
 }
