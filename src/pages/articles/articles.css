@@ -68,3 +68,9 @@
   color: green;
   margin-left: auto;
 }
+
+
+.box {
+  transition: .9s all ease;
+  line-height: .5;
+}

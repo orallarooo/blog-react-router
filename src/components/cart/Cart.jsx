@@ -3,7 +3,7 @@ import './cart.css'
 import { MdAccessTime } from 'react-icons/md'
 import { IoPricetagsOutline } from 'react-icons/io5'
 
-const Cart = ({ img, hashtag, title, text, time }) => {
+export const Cart = ({ img, hashtag, title, text, time }) => {
   return (
     <div className="cart">
       <img src={img} alt="" />
@@ -20,4 +20,4 @@ const Cart = ({ img, hashtag, title, text, time }) => {
     </div>
   )
 }
-export default Cart
+

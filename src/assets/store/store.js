@@ -1,8 +1,10 @@
 import { create } from 'zustand'
 
+import { data_cart } from '../data/data'
+
 export const useArticlesStore = create((set) => ({
   // Load articles from assets file
-  articles: [],
+  articles: data_cart || [],
 
   // articles of years -- boolean
 
