@@ -1,11 +1,14 @@
-import { Cart } from '../../components/cart/Cart'
-import { data_cart } from '../../assets/data/data'
-import { Link } from 'react-router'
 import React from 'react'
+import { Cart } from '../../components/cart/Cart'
+import { Link } from 'react-router'
+
+import { useArticlesStore } from '../../assets/store/store'
 
 import './home.css'
 
 export const Home = () => {
+    const { articles } = useArticlesStore()
+
     return (
         <>
             <section className="home-page">
@@ -20,7 +23,7 @@ export const Home = () => {
                     </div>
 
                     <div className="boxes">
-                        {data_cart.map(post => {
+                        {articles.map(post => {
                             return (
                                 <Link key={post.id} to={`/articles/${post.id}`}>
                                     <Cart
